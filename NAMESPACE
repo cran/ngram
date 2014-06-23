@@ -1,0 +1,15 @@
+useDynLib("ngram")
+
+import(methods)
+
+exportClasses("ngram")
+
+export(concat, preprocess)
+
+exportMethods(
+  "print", "show",
+  "ngram",
+  "babble",
+  "wordcount",
+  "get.ngrams", "get.string", "get.nextwords"
+)
