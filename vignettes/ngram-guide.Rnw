@@ -1,4 +1,4 @@
-%\VignetteIndexEntry{pbdPROF-guide}
+%\VignetteIndexEntry{ngram-guide}
 \documentclass[11pt]{article}
 \usepackage[margin=1.1in]{geometry}
 \newcommand{\thispackage}{\pkg{ngram}\xspace}
@@ -6,10 +6,14 @@
 \input{./include/preamble}
 
 
-\myauthor{Drew Schmidt\\ \texttt{wrathematics@gmail.com} }
+\myauthor{
+	Drew Schmidt\\ \texttt{wrathematics@gmail.com} 
+	\\[1.2cm] 
+    Christian Heckendorf\\ \texttt{heckendorfc@gmail.com}
+}
 \mytitle{Guide to the\\ \thispackage Package}
 \mysubtitle{An n-gram Babbler}
-\myversion{1.0}
+\myversion{1.1}
 
 
 \begin{document}

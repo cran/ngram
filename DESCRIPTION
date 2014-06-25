@@ -1,7 +1,7 @@
 Package: ngram
 Type: Package
 Title: An n-gram Babbler
-Version: 1.0
+Version: 1.1
 Description: This package offers utilities for creating, displaying,
       and "babbling" n-grams.  The babbler is a simple Markov
       process.
@@ -13,6 +13,6 @@ NeedsCompilation: yes
 ByteCompile: yes
 Author: Drew Schmidt [aut, cre], Christian Heckendorf [aut]
 Maintainer: Drew Schmidt <wrathematics@gmail.com>
-Packaged: 2014-06-23 02:58:09 UTC; mschmid3
+Packaged: 2014-06-25 02:45:31 UTC; iao
 Repository: CRAN
-Date/Publication: 2014-06-23 12:31:24
+Date/Publication: 2014-06-25 07:02:26
