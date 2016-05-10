@@ -1,6 +1,17 @@
-example:
-	$(CC) -Wfatal-errors -g -O0 -o example src/rand/*.c src/rand/mt/*.c src/rand/mrg/*.c src/*.c
+all:
+	mkdir -p build;
+	cd build; \
+	mkdir include; \
+	cmake ..; \
+	make
 
-static:
-	$(CC) -fPIC -O0 -o src/*.c && ar rcs libngram.a src/*.o
+install:
+	mkdir -p build;
+	cd build; \
+	mkdir include; \
+	cmake ..; \
+	make install
+
+clean:
+	rm -rf ./build
 

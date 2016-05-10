@@ -1,24 +1,40 @@
-2014-06-23:
+Release 3.0.0
+  * Allowing custom word separators. (Heckendorf)
+  * Support for input text as a character vector with length > 1. (Heckendorf)
+  * Add ngram_asweka() (Heckendorf)
+
+Release 2.0.0
+  * Changed version numbering to Major.Minor.Patch.
+  * Added get.phrasetable().
+  * Added string.summary().
+  * Now storing counts of the ngram itself.
+  * Added concatenate() and charsplitter() utilities.
+  * Added comparison to tau and benchmark in the vignette.
+  * Improvements to the standalone library example programs.
+  * Switched to roxygen2.
+
+Release 1.4.0:
+  * Added summary method to internal library.
+  * Refactored library internals.
+  * Registered native routines with R.
+
+Release 1.3.0:
+  * Added historical background to "About" tab in shiny demo.
+  * Switched from C to R RNG for extra entropy in seeds.
+
+Release 1.2.0:
+  * Fixed segfault when n=1.
+  * Fixed memory allocation bug in the babbler.
+  * Added shiny demo.
+  * Improved ngram printing output and options.
+
+Release 1.1.0:
   * Fixed some package issues.
   * Clarified some statements in the vignette.
 
-======================= Log Before Release =====================================
-
-2014-06-22:
+Release 1.0.0:
   * Fixed memory leaks and Windows crashes (sorry CRAN!).
-
-2014-06-19:
-  * Improved memory footprint of generator.
-
-2014-06-04:
   * Implemented markov generator.
-
-2014-05-11:
   * Added PRNG.
-
-2014-05-08: 
   * Added R wrappers, some extractors.
-
-2014-05-07:
-  * Package created.
-  * n-gram processor added.
+  * n-gram processor added. (Heckendorf)

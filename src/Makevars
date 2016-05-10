@@ -1,11 +1,8 @@
 #######################################################
 
-#PKG_LIBS = ngram/libngram.a
-#PKG_CFLAGS = -Wall #-g
-
 NGRAM_OBJS = \
 	ngram/src/counts.o \
-	ngram/src/gen_noalloc2.o \
+	ngram/src/gen.o \
 	ngram/src/hash.o \
 	ngram/src/lex.o \
 	ngram/src/process.o \
@@ -13,10 +10,11 @@ NGRAM_OBJS = \
 	ngram/src/rand/mt/rand_mt.o \
 	ngram/src/rand/mrg/rand_mrg.o \
 	ngram/src/rand/rng_interface.o \
-	ngram/src/rand/get_seed.o \
 	ngram/src/rand/samplers.o
 
-R_OBJS = constructor.o converters.o gen.o count.o hash.o ng_print.o
+R_OBJS = asweka.o constructor.o converters.o gen.o count.o getseed.o phrase_table.o print.o
+
+PKG_CPPFLAGS=-DNEXTWORDS
 
 OBJECTS = $(R_OBJS) $(NGRAM_OBJS)
 
@@ -24,11 +22,10 @@ all: $(SHLIB)
 
 $(SHLIB): $(OBJECTS) 
 
-#ngram/src/hash.o:
-#	$(CC) -O0 -c -o ngram/src/hash.o ngram/src/hash.c
-#ngram/src/lex.o:
-#	$(CC) -O0 -o ngram/src/lex.o ngram/src/lex.c
-
 
 clean:
-	rm -rf *.o *.so *.dll
+	rm -rf *.o *.so *.dll 
+		ngram/src/*.o 
+		ngram/src/rand/*.o 
+		ngram/src/rand/mt/*.o 
+		ngram/src/rand/mrg/*.o

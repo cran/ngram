@@ -1,0 +1,82 @@
+\section{Benchmarks}\label{sec:benchmarks}
+
+\subsection{tau}
+
+The \pkg{tau}~\citep{tau} package offers, among other things, a framework for 
+constructing n-grams from a text, via its \code{textcnt()} function.
+
+In \pkg{ngram}, the use of \code{get.phrasetable(ngram(x, n=3))} roughly corresponds
+to \code{textcnt(x, n=3, split=" ", method="string")} in \pkg{tau}.  Although
+\code{get.phrasetable()} returns proportions in addition to counts, and in the
+form of a more costly dataframe compared to \code{tau}'s vector of counts, we
+are still able to achieve very good performance.
+\begin{lstlisting}[language=rr]
+library(rbenchmark)
+library(tau)
+library(ngram)
+
+x <- ngram::rcorpus(50000)
+
+reps <- 15
+cols <- c("test", "replications", "elapsed", "relative")
+
+benchmark(tau=textcnt(x, n=3, split=" ", method="string"), ngram=get.phrasetable(ngram(x, n=3)), replications=reps, columns=cols)
+\end{lstlisting}
+Evaluating this script gives:
+\begin{lstlisting}[language=rout]
+   test replications elapsed relative
+2 ngram           15   0.958    1.000
+1   tau           15 137.994  144.044
+\end{lstlisting}
+
+In fact, a good portion of the time in the \pkg{ngram} runs here is in converting the
+internal \proglang{C} data structure over to an \proglang{R} one.  The original
+purpose of the \pkg{ngram} package was merely amusement, babbling n-grams.
+If we just compare the run times for this, the difference is striking:
+\begin{lstlisting}[language=rr]
+library(tau)
+library(ngram)
+
+x <- ngram::rcorpus(100000)
+
+tautime <- system.time(pt1 <- textcnt(x, n=3, split=" ", method="string"))[3]
+ngtime <- system.time(pt2 <- ngram(x, n=3))[3]
+
+cat("tau: ", tautime, "\n")
+cat("ngram: ", ngtime, "\n")
+cat("tau/ngram: ", tautime/ngtime, "\n")
+\end{lstlisting}
+If we evaluate this, we see:
+\begin{lstlisting}[language=rout]
+tau:  36.576 
+ngram:  0.048 
+tau/ngram:  762 
+\end{lstlisting}
+Here, \pkg{ngram} is primed for babbling, in that it has already stored all
+``next words'', while \pkg{tau} only contains what we call the phrasetable of
+3-grams.
+
+
+
+\subsection{RWeka}
+
+The \pkg{ngram} package has a separate tokenizer to produce returns similar to 
+those in the \pkg{RWeka} package.  However, \pkg{ngram} is significantly faster:
+
+\begin{lstlisting}[language=rr]
+library(memuse)
+library(ngram)
+library(RWeka)
+
+x = ngram::rcorpus(nwords=1e6, alphabet="a")
+memuse(x)
+## 4.292 MiB
+
+system.time(ngram_asweka(x, min=2, max=2))
+##    user  system elapsed 
+##   0.216   0.044   0.261 
+
+system.time(NGramTokenizer(x, Weka_control(min=2, max=2)))
+##    user  system elapsed 
+## 500.228   0.528 500.056 
+\end{lstlisting}

@@ -1,25 +1,24 @@
-citHeader("To cite the ngram package:")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("{R} package version %s", meta$Version)
 
 citEntry(
   entry = "Misc",
-  title = "ngram: An n-gram Babbler.",
-  author = personList(as.person("Drew Schmidt"),
-                      as.person("Christian Heckendorf")),
-  year = "2014",
-  note = "{R} Package",
-  url = "http://cran.r-project.org/web/packages/ngram/",
-  textVersion = "Schmidt, D. and C. Heckendorf. (2014) ngram: An n-gram Babbler. R Package, URL http://cran.r-project.org/web/packages/ngram/",
-  key = "ngramRPackage"
+  title = "{ngram}: Fast n-Gram Tokenization",
+  author = person("Drew", "Schmidt"),
+  year = year,
+  note = note,
+  url = "https://cran.r-project.org/package=ngram",
+  textVersion = NULL,
+  key = "ngrampkg"
 )
 
 citEntry(
   entry = "Manual",
-  title = "Guide to the ngram Package",
-  author = personList(as.person("Drew Schmidt"),
-                      as.person("Christian Heckendorf")),
-  year = "2014",
+  title = "Guide to the ngram Package: Fast n-gram Tokenization",
+  author = person("Drew", "Schmidt"),
+  year = year,
   note = "{R} Vignette",
-  url = "http://cran.r-project.org/web/packages/ngram/",
-  textVersion = "Schmidt, D. and C. Heckendorf. (2014) Guide to the ngram package. R Vignette, URL http://cran.r-project.org/web/packages/ngram/",
-  key = "ngramRvignette"
+  url = "https://cran.r-project.org/package=ngram",
+  textVersion = NULL,
+  key = "ngramguide"
 )
