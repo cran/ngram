@@ -1,7 +1,7 @@
 Package: ngram
 Type: Package
 Title: Fast n-Gram 'Tokenization'
-Version: 3.0.3
+Version: 3.0.4
 Description: An n-gram is a sequence of n "words" taken, in order, from a
     body of text.  This is a collection of utilities for creating,
     displaying, summarizing, and "babbling" n-grams.  The
@@ -27,9 +27,9 @@ Collate: 'ngram.r' 'babble.r' 'checks.r' 'concatenate.r' 'getseed.r'
         'getters.r' 'multiread.r' 'ngram-package.R' 'ngram_asweka.r'
         'phrasetable.r' 'preprocess.r' 'print.r' 'rcorpus.r'
         'splitter.r' 'string.summary.r' 'wordcount.r'
-RoxygenNote: 5.0.1
-Packaged: 2017-03-23 23:06:12 UTC; mschmid3
+RoxygenNote: 6.0.1
+Packaged: 2017-11-21 14:57:16 UTC; mschmid3
 Author: Drew Schmidt [aut, cre],
   Christian Heckendorf [aut]
 Repository: CRAN
-Date/Publication: 2017-03-24 05:37:04 UTC
+Date/Publication: 2017-11-21 15:22:56 UTC
