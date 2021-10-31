@@ -1,4 +1,4 @@
-/*  Copyright (c) 2014, Schmidt
+/*  Copyright (c) 2014-2019, Schmidt, Heckendorf
     All rights reserved.
     
     Redistribution and use in source and binary forms, with or without
@@ -27,8 +27,24 @@
 
 #include "ngram.h"
 
+#define MAX(a,b) ((a)>(b) ? (a) : (b))
 
-SEXP ng_extract_ngrams(SEXP ng_ptr, SEXP ngsize_)
+SEXP R_ng_corpus_order(SEXP ng_ptr, SEXP ngsize_)
+{
+  ngramlist_t *ngl = (ngramlist_t *) getRptr(ng_ptr);
+  const int ngsize = INTEGER(ngsize_)[0];
+  int i;
+  SEXP RET;
+
+  PROTECT(RET = allocVector(INTSXP, ngsize));
+  for(i=0; i<ngsize; i++)
+    INTEGER(RET)[i] = ngl->order[i];
+
+  UNPROTECT(1);
+  return RET;
+}
+
+SEXP R_ng_extract_ngrams(SEXP ng_ptr, SEXP ngsize_)
 {
   int i, j, len;
   char *buf;
@@ -55,6 +71,7 @@ SEXP ng_extract_ngrams(SEXP ng_ptr, SEXP ngsize_)
     
     len--; // apparently mkCharLen handles the NUL terminator for some reason
     
+    len = MAX(len, 1);
     buf = malloc(len * sizeof(*buf));
     if(buf == NULL)
         error("out of memory");
@@ -79,7 +96,7 @@ SEXP ng_extract_ngrams(SEXP ng_ptr, SEXP ngsize_)
 
 // take lex return
 // sort by tok and iterate over the list skipping duplicates
-SEXP ng_extract_words(SEXP ng_ptr, SEXP ngsize_)
+SEXP R_ng_extract_words(SEXP ng_ptr, SEXP ngsize_)
 {
   int i, j, k;
   int len, retlen;
@@ -137,17 +154,17 @@ SEXP ng_extract_words(SEXP ng_ptr, SEXP ngsize_)
 
 
 
-SEXP ng_extract_str(SEXP str_ptr, SEXP R_strlen)
+SEXP R_ng_extract_str(SEXP str_ptr, SEXP R_strlen)
 {
   SEXP RET;
-  char *str = (char *) getRptr(str_ptr);
+  char **str = (char **) getRptr(str_ptr);
   
-  PROTECT(RET = allocVector(STRSXP, 1));
+  const int len = INTEGER(R_strlen)[0];
+  PROTECT(RET = allocVector(STRSXP, len));
   
-  SET_STRING_ELT(RET, 0, mkCharLen(str, INTEGER(R_strlen)[0]));
+  for (int i=0; i<len; i++)
+    SET_STRING_ELT(RET, i, mkChar(str[i]));
   
   UNPROTECT(1);
   return RET;
 }
-
-

@@ -4,8 +4,14 @@
 \alias{multiread}
 \title{Multiread}
 \usage{
-multiread(path = ".", extension = "txt", recursive = FALSE,
-  ignore.case = FALSE, prune.empty = TRUE, pathnames = TRUE)
+multiread(
+  path = ".",
+  extension = "txt",
+  recursive = FALSE,
+  ignore.case = FALSE,
+  prune.empty = TRUE,
+  pathnames = TRUE
+)
 }
 \arguments{
 \item{path}{The base file path to search.}
@@ -43,7 +49,7 @@ function.
 }
 \examples{
 \dontrun{
-path <- system.file(package="ngram")
+path = system.file(package="ngram")
 
 ### Read all files in the base path
 multiread(path, extension="*")

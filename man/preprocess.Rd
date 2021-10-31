@@ -4,8 +4,13 @@
 \alias{preprocess}
 \title{Basic Text Preprocessor}
 \usage{
-preprocess(x, case = "lower", remove.punct = FALSE,
-  remove.numbers = FALSE, fix.spacing = TRUE)
+preprocess(
+  x,
+  case = "lower",
+  remove.punct = FALSE,
+  remove.numbers = FALSE,
+  fix.spacing = TRUE
+)
 }
 \arguments{
 \item{x}{Input text.}
@@ -36,7 +41,7 @@ the input text will be made lower/upper case, repesctively.
 \examples{
 library(ngram)
 
-x <- "Watch  out    for snakes!  111"
+x = "Watch  out    for snakes!  111"
 preprocess(x)
 preprocess(x, remove.punct=TRUE, remove.numbers=TRUE)
 

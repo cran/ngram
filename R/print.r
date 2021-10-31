@@ -1,10 +1,3 @@
-ng.print <- function(ng, truncated=TRUE)
-{
-  .Call(ng_print, ng@ngl_ptr, ng@ngsize, as.integer(truncated))
-  invisible()
-}
-
-
 #' ngram printing
 #' 
 #' Print methods.
@@ -25,32 +18,42 @@ ng.print <- function(ng, truncated=TRUE)
 #' 
 #' @seealso \code{\link{ngram}, \link{babble}}
 #' 
-#' @include ngram.r
 #' @name ngram-print
 #' @rdname ngram-print
 NULL
 
+
+
+#' @useDynLib ngram R_ng_print
+ng_print = function(ng, truncated=TRUE)
+{
+  .Call(R_ng_print, ng@ngl_ptr, ng@ngsize, as.integer(truncated))
+  invisible()
+}
+
+printer = function(x, output="summary")
+{
+  output = match.arg(tolower(output), c("summary", "truncated", "full"))
+  
+  if (output == "summary")
+    cat(paste("An ngram object with ", x@ngsize, " ", x@n, "-grams", sep=""), "\n")
+  else if (output == "truncated")
+    ng_print(x, truncated=TRUE)
+  else if (output == "full")
+    ng_print(x, truncated=FALSE)
+  
+  invisible()
+}
+
+
+
 #' @rdname ngram-print
 #' @export
-setMethod("print", signature(x="ngram"),
-  function(x, output="summary")
-  {
-    output <- match.arg(tolower(output), c("summary", "truncated", "full"))
-    
-    if (output == "summary")
-      cat(paste("An ngram object with ", x@ngsize, " ", x@n, "-grams", sep=""), "\n")
-    else if (output == "truncated")
-      ng.print(x, truncated=TRUE)
-    else if (output == "full")
-      ng.print(x, truncated=FALSE)
-    
-    invisible()
-  }
-)
+setMethod("print", signature(x="ngram"), printer)
 
 #' @rdname ngram-print
 #' @export
 setMethod("show", signature(object="ngram"),
   function(object)
-    print(x=object, output="summary")
+    printer(x=object, output="summary")
 )

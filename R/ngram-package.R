@@ -1,4 +1,4 @@
-#' ngram: An n-gram Babbler
+#' ngram: Fast n-Gram Tokenization
 #' 
 #' An n-gram is a sequence of n "words" taken from a
 #' body of text.  This package offers utilities for creating, 
@@ -13,11 +13,6 @@
 #' 
 #' The package has its own PRNG; we use an implementation of MT1997 for all
 #' non-deterministic choices.
-#' 
-#' @useDynLib ngram,  
-#'   ng_extract_ngrams, ng_extract_str, ng_print, ng_process,
-#'   R_ngram_gen, R_ngram_get_seed, R_ngram_wordcount,
-#'   R_ng_get_phrasetable, R_stringsummary, ng_asweka
 #' 
 #' @import methods
 #' 

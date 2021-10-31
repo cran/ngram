@@ -4,8 +4,13 @@
 \alias{splitter}
 \title{Character Splitter}
 \usage{
-splitter(string, split.char = FALSE, split.space = TRUE, spacesep = "_",
-  split.punct = FALSE)
+splitter(
+  string,
+  split.char = FALSE,
+  split.space = TRUE,
+  spacesep = "_",
+  split.punct = FALSE
+)
 }
 \arguments{
 \item{string}{An input string.}
@@ -35,7 +40,7 @@ Note that choosing \code{split.char=TRUE} necessarily implies
 \code{split.space=TRUE}.
 }
 \examples{
-x <- "watch out! a snake!"
+x = "watch out! a snake!"
 
 splitter(x, split.char=TRUE)
 splitter(x, split.space=TRUE, spacesep="_")
