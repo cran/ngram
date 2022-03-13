@@ -1,5 +1,5 @@
-60e9388909a88fadfd5d66c5dcf7f13e *ChangeLog
-917ff0d7f7f054cf6de686e1b7bb27d9 *DESCRIPTION
+0e7f9345a2b7a0a52d74523b86a62491 *ChangeLog
+55e697400cc0af318d8eb094f02ade57 *DESCRIPTION
 df0a1070c99804ceb6797d978cb4f56f *LICENSE
 cb765e518c6fe6cb7e0ccff371cbe762 *NAMESPACE
 d83a32a84941b834eb32f5331069b881 *R/00-classes.r
@@ -9,7 +9,7 @@ f4739a22ee2bb441b7ea4ff8ba32b499 *R/babble.r
 66e04388e076ac41c2a8df06b8641b6f *R/getseed.r
 3dbce130d23a69103e92555c8b576200 *R/getters.r
 172e80b273432652c1fd02cea27ed217 *R/multiread.r
-2889d2c78a82d695012df5a93dddb771 *R/ngram-package.R
+91c37d65db1c0cc1730ac1b326d1be34 *R/ngram-package.R
 a43df9b5d3424985afef0740db8d69b1 *R/ngram_asweka.r
 83b9e34260edf5e91ad278423823e713 *R/phrasetable.r
 fda0f1bf01fbe94f1db2e27cc3968128 *R/preprocess.r
@@ -19,7 +19,7 @@ dcf53fdb2234481034a85cf0ae1867c4 *R/print.r
 dc854cc20b40d08714e0639b6ef5c314 *R/splitter.r
 81d654ceaccf1644907b0ff4b0b5110d *R/string_summary.r
 2d5b87a740e9dc09ffbc5a97b771cdeb *R/wordcount.r
-ac2736f1f3984e5d6471cd4b9c6ed34f *README.md
+2f9e736bed9ef82ce5c1ecc7417c0f6a *README.md
 a54e0653758385614cadb8b2768d4ff5 *cleanup
 e4afc29c01fae21726df51e2a244798e *demo/00Index
 24304cb5762cc8fac4ea5fcd60067af8 *demo/demo.r
@@ -27,8 +27,8 @@ c917ab368b5fc889aff8e553077dc229 *inst/CITATION
 2774e5204a68b7bc6eae99b642599b40 *inst/benchmarks/bench.r
 c6127ac2ecba0ef377cc4d9918cb0d81 *inst/benchmarks/ngonly.r
 6f72c4c6ce8a64a2af2b8b1380cb93a8 *inst/benchmarks/rbenchmark.r
-7204c79753151fecff0632920ee1fabd *inst/doc/ngram-guide.Rnw
-269f7819368e5312d9ab508682c86211 *inst/doc/ngram-guide.pdf
+ddfeeb6ed69f9864f4f478ef7f11dc2c *inst/doc/ngram-guide.Rnw
+7910a036f15a24981faec23096cb4b61 *inst/doc/ngram-guide.pdf
 8a60356be59edcfd5615bcd92d50673d *inst/shiny/babbler/server.r
 39c94767c9c9219c0d96eae2da16ed9b *inst/shiny/babbler/ui.r
 a4553f5ff081fffe96446894905d5cf6 *inst/shiny/shiny.r
@@ -38,7 +38,7 @@ a4553f5ff081fffe96446894905d5cf6 *inst/shiny/shiny.r
 7c3c2b2ac32d21b259ff02cbbdf198c0 *man/getters.Rd
 0e0435caf59fc63b7443200ba113d9cc *man/multiread.Rd
 50c33da2dd6b2533d588df7b9c1f5f40 *man/ngram-class.Rd
-61f7dbb6e57393d7061bed10c3432c52 *man/ngram-package.Rd
+d595fa4b86a65ba48c2e17e9a25d735d *man/ngram-package.Rd
 49ad8ba5bfbb565e4e0887ef5a86b3eb *man/ngram-print.Rd
 8802f1c0d3817a7246fe43a3ae8f0dda *man/ngram.Rd
 cf0713ba60d765873dbff6a75b4c9695 *man/phrasetable.Rd
@@ -103,7 +103,7 @@ d8555f5cc4c8e0270cb6730b1ede6b84 *tests/splitter.R
 44c2787b483300c105dac0fba2bfd975 *tests/string_summary.r
 714a552beda5d2a526b56447c2b97172 *tests/wordcount.r
 fd34cd46e00468dc4f468334fac56659 *vignettes/build_pdf.sh
-0335105671d0e866688b5abb6a09eaf1 *vignettes/cover/cover.pdf
+e40ea52ac5cec69dd9f8366c388314aa *vignettes/cover/cover.pdf
 cf225760b8a3d862eeb27f1a073bbc95 *vignettes/include/00-copyright.tex
 cdf6785d8266150e0e085c34d2471625 *vignettes/include/01-introduction.tex
 94a46fc57dff0ae7aa9806fc001d5cd8 *vignettes/include/02-installation.tex
@@ -115,4 +115,4 @@ d9a20cd3149d122ae42499eeff76c0f1 *vignettes/include/04-use.tex
 c361b262c34785162574e5dcd1fc559b *vignettes/include/pics/uch_small.png
 78c63e4c0bfc9f19bea7bfff6329ec8c *vignettes/include/preamble.tex
 77d0c1a38b9e639ac92e19e817e4c633 *vignettes/include/titlepage.tex
-7204c79753151fecff0632920ee1fabd *vignettes/ngram-guide.Rnw
+ddfeeb6ed69f9864f4f478ef7f11dc2c *vignettes/ngram-guide.Rnw
