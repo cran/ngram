@@ -1,5 +1,5 @@
-0e7f9345a2b7a0a52d74523b86a62491 *ChangeLog
-55e697400cc0af318d8eb094f02ade57 *DESCRIPTION
+0e2cb91346e14ab31cfd0f16c7eb44e5 *ChangeLog
+cd7b6c185ea287ca4a10d22cbacb53c5 *DESCRIPTION
 df0a1070c99804ceb6797d978cb4f56f *LICENSE
 cb765e518c6fe6cb7e0ccff371cbe762 *NAMESPACE
 d83a32a84941b834eb32f5331069b881 *R/00-classes.r
@@ -19,7 +19,7 @@ dcf53fdb2234481034a85cf0ae1867c4 *R/print.r
 dc854cc20b40d08714e0639b6ef5c314 *R/splitter.r
 81d654ceaccf1644907b0ff4b0b5110d *R/string_summary.r
 2d5b87a740e9dc09ffbc5a97b771cdeb *R/wordcount.r
-2f9e736bed9ef82ce5c1ecc7417c0f6a *README.md
+6cd06633e694ff613ea2dba956d67a26 *README.md
 a54e0653758385614cadb8b2768d4ff5 *cleanup
 e4afc29c01fae21726df51e2a244798e *demo/00Index
 24304cb5762cc8fac4ea5fcd60067af8 *demo/demo.r
@@ -54,7 +54,7 @@ cf0713ba60d765873dbff6a75b4c9695 *man/phrasetable.Rd
 02e90096e52ee4824e45a7e11bbe8afa *src/constructor.c
 749cf7712e1c243df9105b25d7bc3457 *src/converters.c
 fb4e8a1f0ca3f5210ede258c169f2e15 *src/count.c
-c0875ad90818802572cdee1b7ef96979 *src/getseed.c
+e449796fb7d26f9c479359e41b7bad68 *src/getseed.c
 afda496021c119c06314afa41054e848 *src/ngram.h
 b30222b43b6f9b619bdda908277c5ecf *src/ngram/CMakeLists.txt
 8a1157b40b077639a4fd11a7129fa586 *src/ngram/LICENSE
@@ -87,14 +87,14 @@ f6bee482f1ac0f208253b2e69794edd3 *src/ngram/src/rand/rand.h
 d2bf7f617a8804e3fd743cef6675472a *src/ngram/src/rand/rng_interface.c
 8fcce2c51103d11f7c49622822939ef0 *src/ngram/src/rand/rng_interface.h
 0d9d3afd234f4788f08cb34e374e5149 *src/ngram/src/rand/samplers.c
-e1db667b22df1c70ec6fa151856d1a6d *src/ngram/src/rand/utils.c
+d0dccecff05666875b3c17fec2257f49 *src/ngram/src/rand/utils.c
 fa7f1e0692b3b9536bbdc4e7f948ded6 *src/ngram/src/sorts.c
 e6f5adee95848b1d9944cd20c25e239f *src/ngram/src/sorts.h
 586d2b0b108990cb8af495210dd6dc92 *src/ngram/src/summary.c
 fb74dfaf3f998abeac091587b4435239 *src/ngram/src/summary.h
 1bc89960d54aa8711f233e62326bd8ba *src/ngram/src/wordcmp.c
 61fe73e08cba6a888a09d753d43f8168 *src/ngram/src/wordcmp.h
-73e533912c78b7ea102bc3a63fd0aba9 *src/ngram_native.c
+5b13346784ec7d72238d5f7d623a37c5 *src/ngram_native.c
 af897697b54cbfbececdd10a65ee93ca *src/phrase_table.c
 31a03f89e457957f9011e96225d688f1 *src/print.c
 b0cef9e1448c14b91ee1c9a2c214c877 *tests/get.phrasetable.r
