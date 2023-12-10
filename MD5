@@ -1,5 +1,5 @@
-0e2cb91346e14ab31cfd0f16c7eb44e5 *ChangeLog
-cd7b6c185ea287ca4a10d22cbacb53c5 *DESCRIPTION
+a72cd27c388ace88310d785bac1e8bcf *ChangeLog
+8d023a4f1ae07a9fd9b6628c38bcf47b *DESCRIPTION
 df0a1070c99804ceb6797d978cb4f56f *LICENSE
 cb765e518c6fe6cb7e0ccff371cbe762 *NAMESPACE
 d83a32a84941b834eb32f5331069b881 *R/00-classes.r
@@ -19,11 +19,11 @@ dcf53fdb2234481034a85cf0ae1867c4 *R/print.r
 dc854cc20b40d08714e0639b6ef5c314 *R/splitter.r
 81d654ceaccf1644907b0ff4b0b5110d *R/string_summary.r
 2d5b87a740e9dc09ffbc5a97b771cdeb *R/wordcount.r
-6cd06633e694ff613ea2dba956d67a26 *README.md
+51c16b01ef0d33c052f2d762565a910f *README.md
 a54e0653758385614cadb8b2768d4ff5 *cleanup
 e4afc29c01fae21726df51e2a244798e *demo/00Index
 24304cb5762cc8fac4ea5fcd60067af8 *demo/demo.r
-c917ab368b5fc889aff8e553077dc229 *inst/CITATION
+170b00a9fe4ea32e8960ad9e8be0ba8e *inst/CITATION
 2774e5204a68b7bc6eae99b642599b40 *inst/benchmarks/bench.r
 c6127ac2ecba0ef377cc4d9918cb0d81 *inst/benchmarks/ngonly.r
 6f72c4c6ce8a64a2af2b8b1380cb93a8 *inst/benchmarks/rbenchmark.r
@@ -49,7 +49,7 @@ cf0713ba60d765873dbff6a75b4c9695 *man/phrasetable.Rd
 39979922001886cd3b7609b0f1e3ae6b *man/tokenize-asweka.Rd
 9d355d9e81e2e3fadf80202b2b54afc0 *man/wordcount.Rd
 66dceac1a33e40dd28fb3e1d9f527ac9 *src/Makevars
-4a95bf6e96535a87e701d307e83df9d7 *src/asweka.c
+17ab31804322bbf48efb09358d9838c5 *src/asweka.c
 524e0acc2263488c52fdb510da60b909 *src/babble.c
 02e90096e52ee4824e45a7e11bbe8afa *src/constructor.c
 749cf7712e1c243df9105b25d7bc3457 *src/converters.c
